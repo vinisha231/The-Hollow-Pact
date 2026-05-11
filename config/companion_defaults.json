@@ -1,0 +1,51 @@
+{
+  "trust_engine": {
+    "starting_trust": 50,
+    "event_weights": {
+      "kept_promise": 8,
+      "broke_promise": -15,
+      "defended_companion": 10,
+      "abandoned_companion": -20,
+      "shared_loot": 5,
+      "stole_loot": -12,
+      "agreed_with_companion": 3,
+      "dismissed_companion_idea": -4,
+      "helped_villager": 2,
+      "harmed_villager": -8,
+      "lied_to_companion": -10,
+      "confided_in_companion": 6,
+      "completed_companion_quest": 15,
+      "blocked_companion_agenda": -18,
+      "humiliated_companion": -25,
+      "complimented_companion": 2
+    }
+  },
+  "orchestrator": {
+    "default_model": "claude-sonnet-4-6",
+    "reflection_model": "claude-opus-4-7",
+    "bark_model": "claude-haiku-4-5-20251001",
+    "max_dialogue_tokens": 512,
+    "retry_limit": 2,
+    "combat_bark_ratio": 0.7,
+    "response_timeout_ms": 1200
+  },
+  "memory": {
+    "short_term_window": 20,
+    "episodic_top_k": 5,
+    "summarise_every_n_events": 30,
+    "summarise_interval_seconds": 1800,
+    "embedding_model": "text-embedding-3-small"
+  },
+  "tts": {
+    "default_model": "eleven_turbo_v2_5",
+    "latency_optimisation": 3,
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "stream_chunk_size": 4096
+  },
+  "matchmaking": {
+    "match_size": 4,
+    "match_timeout_seconds": 120,
+    "queue_key": "matchmaking:queue"
+  }
+}
