@@ -1,0 +1,147 @@
+{
+  "barks": {
+    "brann_ironveil": {
+      "attack": [
+        "Moving on the left flank.",
+        "Eyes up.",
+        "Don't miss this.",
+        "I'll take the right.",
+        "Stay tight."
+      ],
+      "hurt": [
+        "That got through.",
+        "Still here.",
+        "First blood to them.",
+        "Not yet.",
+        "That's going to bruise."
+      ],
+      "critical_hp": [
+        "I need a moment.",
+        "Keep them back.",
+        "I've been worse. Not by much."
+      ],
+      "ability": [
+        "Shield wall — hold!",
+        "Cover me.",
+        "Formation."
+      ],
+      "heal_ally": [
+        "Stay still.",
+        "I've got you.",
+        "Don't move."
+      ],
+      "victory": [
+        "Done.",
+        "Clean enough.",
+        "Next time try not to get cornered.",
+        "That's done, then."
+      ],
+      "betrayal_combat": [
+        "I'm done protecting you.",
+        "This ends here.",
+        "You should have listened.",
+        "Did you think I wouldn't notice?"
+      ],
+      "low_trust_passive": [
+        "...",
+        "Mm.",
+        "Fine.",
+        "If you say so."
+      ]
+    },
+    "lyra_nightwhisper": {
+      "attack": [
+        "Ooh, that's a big one.",
+        "Fire first, questions after.",
+        "I've got the one on the right.",
+        "Watch the flanks.",
+        "Going in."
+      ],
+      "hurt": [
+        "Ow! That's — ow.",
+        "They're stronger than they look.",
+        "I'm fine! Mostly.",
+        "That stung."
+      ],
+      "critical_hp": [
+        "I could really use a hand here.",
+        "Not great, not great.",
+        "Could someone please—"
+      ],
+      "ability": [
+        "Nature's patience, I summon—",
+        "This one's for you.",
+        "Hold still, forest take you!"
+      ],
+      "heal_ally": [
+        "Hold on, I've got something.",
+        "This'll only hurt a little.",
+        "There — better?"
+      ],
+      "victory": [
+        "Oh, good. We didn't die.",
+        "Right! That's that.",
+        "The forest approves.",
+        "Nice teamwork. Mostly."
+      ],
+      "betrayal_combat": [
+        "You never deserved my loyalty.",
+        "The grove asked me to choose. I chose.",
+        "You blocked my path one too many times."
+      ],
+      "low_trust_passive": [
+        "Interesting.",
+        "If you think that's best.",
+        "Fine.",
+        "Whatever you say."
+      ]
+    },
+    "ossian_vex": {
+      "attack": [
+        "Efficient.",
+        "Target acquired.",
+        "On your left.",
+        "I'll handle this.",
+        "Keep moving."
+      ],
+      "hurt": [
+        "Hm.",
+        "That's noted.",
+        "Good hit.",
+        "Not enough."
+      ],
+      "critical_hp": [
+        "Tactical retreat.",
+        "Reassessing.",
+        "...(silence)"
+      ],
+      "ability": [
+        "Shadow step.",
+        "Don't blink.",
+        "Finished."
+      ],
+      "heal_ally": [
+        "You owe me.",
+        "Stay down after.",
+        "Don't make me do this twice."
+      ],
+      "victory": [
+        "Efficient.",
+        "Job's done.",
+        "Satisfactory.",
+        "Next."
+      ],
+      "betrayal_combat": [
+        "The Guild sends their regards.",
+        "Nothing personal. Actually — maybe a little.",
+        "You were a liability."
+      ],
+      "low_trust_passive": [
+        "...",
+        "Noted.",
+        "The job is the job.",
+        "Don't make me repeat myself."
+      ]
+    }
+  }
+}
