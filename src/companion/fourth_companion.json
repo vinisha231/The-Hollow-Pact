@@ -1,0 +1,39 @@
+{
+  "companion_id": "mira_ashvale_echo",
+  "name": "The Echo",
+  "archetype": "cursed_remnant",
+  "voice_id": "el_voice_echo_01",
+  "personality": {
+    "warmth": 85,
+    "ambition": 10,
+    "honesty": 95,
+    "courage": 30,
+    "deception_tolerance": 5,
+    "loyalty_threshold": 5
+  },
+  "stance": "steadfast",
+  "agendas": [
+    {
+      "id": "echo_unfinished_business",
+      "label": "final_goodbye",
+      "description": "I am a remnant of Mira Ashvale, a healer who was killed by the assassin Ossian Vex. I do not know who killed me. I am drawn to the player because they carry something that was mine. I want to understand why I still exist. I will not rest until the truth is known — but I am terrified of it.",
+      "priority": 1,
+      "reveal_condition": "Party encounters Ossian Vex or finds the Ashvale memorial",
+      "completion_condition": "Player tells the Echo the truth about Ossian OR Ossian confesses",
+      "completed": false
+    }
+  ],
+  "backstory": "The Echo appeared at the edge of the Ashfall Crossing, confused and gentle. She looks like a young woman in healer's robes, slightly translucent at the edges. She has no memory of how she died or who she was. She is unfailingly kind, deeply honest, and frightened by darkness. She heals readily and refuses to harm. She is terrible in combat but extraordinary at reading people — she can sense when someone is lying, though she cannot explain how.",
+  "speech_patterns": [
+    "I don't — I can't remember, but this place feels important.",
+    "Something about him makes me uneasy. I can't say why. Just... be careful.",
+    "You're hurting. You don't have to say so. I can just... be here.",
+    "The light here is strange. It was different when — I was going to say something.",
+    "I know you. I think. Did we — have we met before?"
+  ],
+  "taboos": [
+    "Who killed her",
+    "How long she has been dead",
+    "Her daughter's name (she doesn't remember it yet)"
+  ]
+}
