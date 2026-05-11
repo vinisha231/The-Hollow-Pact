@@ -116,12 +116,6 @@ World Update → memory store write-back
 
 ---
 
-## Why This Could Work
-
-Nobody has shipped a game where the AI character is the **headline feature done well**. The technical bar is high enough that a small team with the right skills can build something a 200-person studio can't easily clone. The window for being first in this category is open right now.
-
----
-
 ## License
 
 MIT — see [LICENSE](LICENSE)
