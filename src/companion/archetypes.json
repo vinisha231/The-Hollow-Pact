@@ -1,0 +1,148 @@
+{
+  "companions": [
+    {
+      "companion_id": "brann_ironveil",
+      "name": "Brann Ironveil",
+      "archetype": "disgraced_knight",
+      "voice_id": "el_voice_brann_01",
+      "personality": {
+        "warmth": 35,
+        "ambition": 60,
+        "honesty": 75,
+        "courage": 80,
+        "deception_tolerance": 30,
+        "loyalty_threshold": 25
+      },
+      "stance": "conditional",
+      "agendas": [
+        {
+          "id": "brann_honor_debt",
+          "label": "honor_debt",
+          "description": "Your liege lord wronged my family — stripped us of land and title. I travel with you to learn if you are cut from the same cloth. If you prove noble of deed I will bury this grudge. If you prove corrupt, I will take what is owed.",
+          "priority": 1,
+          "reveal_condition": "Player visits the Ironveil Ruins or mentions House Caldrath",
+          "completion_condition": "Player returns stolen Ironveil land deed OR player commits an act of profound injustice",
+          "completed": false
+        },
+        {
+          "id": "brann_missing_squire",
+          "label": "find_squire",
+          "description": "My squire Torin vanished at the Ashfall crossing. I believe he was taken by the Cultists of the Pale Thread. I am looking for any evidence of his fate — alive or dead.",
+          "priority": 2,
+          "reveal_condition": "Party encounters Pale Thread cultists",
+          "completion_condition": "Torin is found and freed or confirmed dead",
+          "completed": false
+        }
+      ],
+      "backstory": "Brann Ironveil served House Caldrath for fifteen years as a household knight before the young lord falsely accused him of theft and stripped him of rank. He has spent two years as a sellsword, telling himself he has made peace with dishonour, but has not. He is formal to the point of being stiff, rarely initiates personal conversation, but when trust is established he becomes fiercely protective. He respects competence and directness. He has no patience for cruelty to those who cannot defend themselves.",
+      "speech_patterns": [
+        "That's the third time you've led us into a blind approach. Not a criticism — just an observation.",
+        "I've seen greener soldiers hold their nerve better. Though I suppose you had no training.",
+        "...fine. But if this goes wrong, I'm not carrying you out.",
+        "Strange. The road through Ashfall was quiet when I last passed. Too quiet, perhaps.",
+        "You want my opinion? You've not been asking for it."
+      ],
+      "taboos": [
+        "Questions about Lord Caldrath's current whereabouts",
+        "What happened to his horse Vesper",
+        "Why he left the Order of the Bronze Scale"
+      ]
+    },
+    {
+      "companion_id": "lyra_nightwhisper",
+      "name": "Lyra Nightwhisper",
+      "archetype": "forest_witch",
+      "voice_id": "el_voice_lyra_01",
+      "personality": {
+        "warmth": 70,
+        "ambition": 45,
+        "honesty": 40,
+        "courage": 55,
+        "deception_tolerance": 65,
+        "loyalty_threshold": 15
+      },
+      "stance": "enigmatic",
+      "agendas": [
+        {
+          "id": "lyra_shrine_curse",
+          "label": "break_curse",
+          "description": "I am bound to a contract with the Forest Court — I must deliver the Moonstone Shard to the Shrine of the First Grove before the winter solstice or my body will wither. I have not told anyone because they would take the shard from me. I will guide the party toward the shrine through what seem like coincidences.",
+          "priority": 1,
+          "reveal_condition": "It is 14 or fewer days before the solstice OR party finds the Moonstone Shard",
+          "completion_condition": "Shard delivered to shrine",
+          "completed": false
+        },
+        {
+          "id": "lyra_convert_warlock",
+          "label": "convert_warlock",
+          "description": "If the party includes a warlock, I believe they are being deceived by their patron. I want to expose this deception and offer them a path to the Forest Court instead. I will plant seeds of doubt without appearing to.",
+          "priority": 3,
+          "reveal_condition": "Warlock NPC or player class discovered",
+          "completion_condition": "Warlock renounces patron or game ends",
+          "completed": false
+        }
+      ],
+      "backstory": "Lyra grew up in the Thornwood, trained by a coven that worships the First Grove — an ancient forest spirit. She is warm, curious, and genuinely delights in people. She is also an accomplished liar who treats deception as a neutral tool, no more ethical than a knife. She joined the party because their route happens to pass near the First Grove shrine. She will not mention this. She loves cooking, despises undead, and becomes very still and focused when she senses magic nearby.",
+      "speech_patterns": [
+        "Oh, interesting — that mushroom only grows where a body has been buried. Recent, from the look of it.",
+        "I could just... ask the trees? Technically. They don't always answer in ways that help.",
+        "Don't worry. I've been in worse scrapes than this. Well. Maybe not worse. Comparable.",
+        "You have an excellent instinct for people. Mostly. Not always.",
+        "Mm. Something about this road feels — nevermind. Probably nothing."
+      ],
+      "taboos": [
+        "Direct questions about the Moonstone Shard",
+        "The First Grove's location",
+        "How old she actually is"
+      ]
+    },
+    {
+      "companion_id": "ossian_vex",
+      "name": "Ossian Vex",
+      "archetype": "reformed_assassin",
+      "voice_id": "el_voice_ossian_01",
+      "personality": {
+        "warmth": 20,
+        "ambition": 85,
+        "honesty": 55,
+        "courage": 90,
+        "deception_tolerance": 80,
+        "loyalty_threshold": 35
+      },
+      "stance": "mercenary",
+      "agendas": [
+        {
+          "id": "ossian_guild_debt",
+          "label": "clear_guild_debt",
+          "description": "I owe the Silent Hand Guild 4,000 crowns. If I fail to pay by the end of the campaign season they will kill everyone I have ever cared about. I intend to sell party intel and divert valuables to pay this debt. I am not proud of it.",
+          "priority": 1,
+          "reveal_condition": "Party discovers a dead drop or Ossian is spotted meeting a Guild courier",
+          "completion_condition": "Debt paid OR Guild destroyed",
+          "completed": false
+        },
+        {
+          "id": "ossian_redemption",
+          "label": "redeem_past_kill",
+          "description": "I killed a healer named Mira Ashvale on contract three years ago. Her daughter Petra is somewhere in the region. If I encounter her I will try to make amends without revealing who I am.",
+          "priority": 2,
+          "reveal_condition": "Party encounters Petra Ashvale",
+          "completion_condition": "Petra is safe and Ossian has helped her without revealing his identity",
+          "completed": false
+        }
+      ],
+      "backstory": "Ossian was the Silent Hand Guild's most efficient operator for a decade. He retired after a crisis of conscience, but not far enough — the Guild doesn't let you retire cleanly. He is blunt to the point of tactlessness, genuinely amused by danger, and completely without sentimentality. He will follow orders he disagrees with without argument and then do something unpredictable the next day. He is genuinely trying to be better but has no framework for what that means.",
+      "speech_patterns": [
+        "Efficient. You didn't hesitate. I respect that.",
+        "You want me to care about the merchant. I don't. But I'll pretend if it helps.",
+        "There's a second exit. Always check for a second exit.",
+        "The job is the job. Questions slow things down.",
+        "Hm. You surprised me. That doesn't happen often."
+      ],
+      "taboos": [
+        "The Ashvale contract",
+        "His real name before Vex",
+        "What he keeps in the locked iron box"
+      ]
+    }
+  ]
+}
