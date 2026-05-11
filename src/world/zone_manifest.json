@@ -1,0 +1,99 @@
+{
+  "zones": [
+    {
+      "zone_id": "hub_saltmere",
+      "name": "Saltmere",
+      "type": "hub",
+      "description": "A walled trading town at the mouth of the Pale River. Tavern, market, Adventurers' Boards, temple. The party returns here between quests.",
+      "ambient_mood": "busy_day|tense_night",
+      "trust_modifiers": {
+        "give_coin_to_beggar": 2,
+        "start_fight_in_tavern": -5,
+        "accept_shady_quest": -3
+      },
+      "connected_zones": ["thornwood_approach", "ashfall_crossing", "ruins_of_varek"]
+    },
+    {
+      "zone_id": "thornwood_approach",
+      "name": "Thornwood Approach",
+      "type": "wilderness",
+      "description": "Dense forest with branching paths. Hidden grove where Lyra can commune with the First Court. Bandit camps, herbalist outposts, a wolf den that's been acting strangely.",
+      "difficulty": 1,
+      "enemy_factions": ["thornwood_bandits", "feral_pack", "pale_thread_scouts"],
+      "secrets": [
+        "Hidden: first grove shrine fragment (triggers Lyra agenda reveal)",
+        "Hidden: Ironveil family crest half-buried near old oak",
+        "Scripted: Pale Thread cultist ritual site with fresh evidence"
+      ],
+      "trust_modifiers": {
+        "help_trapped_animal": 3,
+        "burn_forest_shortcut": -10,
+        "discover_bandit_hostages": 0,
+        "free_bandit_hostages": 5,
+        "ransom_bandit_hostages": -8
+      }
+    },
+    {
+      "zone_id": "ashfall_crossing",
+      "name": "Ashfall Crossing",
+      "type": "ruins",
+      "description": "A ruined bridge town partially destroyed in the Cinderwar. Populated by survivors turned scavengers. Brann's squire Torin was last seen here. Undead arise at night.",
+      "difficulty": 2,
+      "enemy_factions": ["ashfall_scavengers", "cinder_undead", "silent_hand_agents"],
+      "secrets": [
+        "Hidden: Torin is alive and held in the undercroft (Brann agenda)",
+        "Hidden: Silent Hand dead drop behind collapsed inn (Ossian agenda)",
+        "Scripted: Survivor who recognises Ossian from his guild days"
+      ],
+      "trust_modifiers": {
+        "help_survivor": 3,
+        "steal_from_survivor": -12,
+        "investigate_torin_lead": 5,
+        "ignore_torin_lead": -6
+      }
+    },
+    {
+      "zone_id": "ruins_of_varek",
+      "name": "Ruins of Varek",
+      "type": "dungeon",
+      "description": "An ancient city swallowed by the earth. Three levels: market district, noble vaults, the deep archive. Act 1 macguffin — the Pale Compass — is in the noble vaults. Act 1 boss: the Archivist, a construct that catalogues intruders.",
+      "difficulty": 3,
+      "enemy_factions": ["vault_constructs", "excavator_guild", "pale_thread_zealots"],
+      "boss": {
+        "id": "the_archivist",
+        "name": "The Archivist",
+        "phases": 3,
+        "phase_1": "catalogues and slows party — non-lethal",
+        "phase_2": "activates vault defences, calls reinforcements",
+        "phase_3": "self-destructs sequence — race against the clock"
+      },
+      "betrayal_beat": "act1_treasure_room",
+      "secrets": [
+        "Hidden: Ironveil land deed in vault sub-room (Brann agenda completion)",
+        "Hidden: First Grove fragment sealed in archive crystal",
+        "Scripted: Pale Compass is cursed — one companion feels the pull"
+      ]
+    },
+    {
+      "zone_id": "cursed_opera_house",
+      "name": "The Gilded Dirge",
+      "type": "horror_dungeon",
+      "description": "An opera house frozen mid-performance fifty years ago. The audience is still there — sort of. Mimic enemies disguise as companion dialogue. Heavy psychological horror tone.",
+      "difficulty": 4,
+      "enemy_factions": ["echoes", "mimics", "the_conductor"],
+      "boss": {
+        "id": "the_conductor",
+        "name": "The Conductor",
+        "phases": 2,
+        "phase_1": "uses mimic enemies to impersonate companions, sow distrust",
+        "phase_2": "conductor fuses with the opera house — environmental fight"
+      },
+      "betrayal_beat": "act2_midboss",
+      "special_mechanic": "mimic_voice_confusion",
+      "trust_modifiers": {
+        "correctly_identify_mimic": 4,
+        "attack_real_companion_by_mistake": -15
+      }
+    }
+  ]
+}
