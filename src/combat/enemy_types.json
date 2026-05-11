@@ -1,0 +1,96 @@
+{
+  "enemies": [
+    {
+      "enemy_id": "thornwood_bandit",
+      "name": "Thornwood Bandit",
+      "faction": "thornwood_bandits",
+      "hp": 60,
+      "damage": 12,
+      "behaviour": "aggressive_melee",
+      "phase_count": 1,
+      "loot_table": {"coin_small": 0.8, "bandage": 0.3, "intel_scrap": 0.1},
+      "trust_events_on_kill": {}
+    },
+    {
+      "enemy_id": "pale_thread_zealot",
+      "name": "Pale Thread Zealot",
+      "faction": "pale_thread_zealots",
+      "hp": 80,
+      "damage": 15,
+      "behaviour": "ranged_support",
+      "phase_count": 1,
+      "loot_table": {"coin_medium": 0.5, "pale_thread_token": 0.9, "scroll_fragment": 0.2},
+      "trust_events_on_kill": {}
+    },
+    {
+      "enemy_id": "cinder_risen",
+      "name": "Cinder Risen",
+      "faction": "cinder_undead",
+      "hp": 45,
+      "damage": 18,
+      "behaviour": "swarm_melee",
+      "phase_count": 1,
+      "loot_table": {"ash_fragment": 0.9, "coin_small": 0.2},
+      "trust_events_on_kill": {},
+      "lyra_reacts": "Do you hear that? The risen are — they're in pain. Whatever cursed them, it's recent."
+    },
+    {
+      "enemy_id": "vault_construct",
+      "name": "Vault Construct",
+      "faction": "vault_constructs",
+      "hp": 120,
+      "damage": 22,
+      "behaviour": "patrol_guardian",
+      "phase_count": 1,
+      "loot_table": {"ancient_gear": 0.7, "coin_large": 0.4},
+      "trust_events_on_kill": {}
+    },
+    {
+      "enemy_id": "the_archivist",
+      "name": "The Archivist",
+      "faction": "vault_constructs",
+      "is_boss": true,
+      "hp": 800,
+      "damage": 35,
+      "behaviour": "boss_phased",
+      "phase_count": 3,
+      "phases": {
+        "1": {"trigger_hp": 800, "description": "Catalogues party — status debuffs, non-lethal", "adds": []},
+        "2": {"trigger_hp": 400, "description": "Activates vault defences, calls construct reinforcements", "adds": ["vault_construct", "vault_construct"]},
+        "3": {"trigger_hp": 100, "description": "Self-destruct sequence — room fills with energy, escape timer", "adds": [], "timer_seconds": 90}
+      },
+      "loot_table": {"pale_compass": 1.0, "archivist_core": 0.5, "coin_vault": 1.0},
+      "trust_events_on_kill": {"lyra_nightwhisper": "completed_companion_quest"},
+      "betrayal_beat": "act1_treasure_room"
+    },
+    {
+      "enemy_id": "echo_mimic",
+      "name": "Echo Mimic",
+      "faction": "echoes",
+      "hp": 55,
+      "damage": 14,
+      "behaviour": "mimic_voice",
+      "phase_count": 1,
+      "special": "Speaks lines from companion bark library. Players may attack real companion by mistake.",
+      "loot_table": {"echo_shard": 0.9},
+      "trust_events_on_kill": {},
+      "combat_note": "When this enemy spawns, fire trust event 'correctly_identify_mimic' if player targets it correctly, or 'attack_real_companion_by_mistake' if player hits their companion instead."
+    },
+    {
+      "enemy_id": "the_conductor",
+      "name": "The Conductor",
+      "faction": "echoes",
+      "is_boss": true,
+      "hp": 1200,
+      "damage": 45,
+      "behaviour": "boss_phased",
+      "phase_count": 2,
+      "phases": {
+        "1": {"trigger_hp": 1200, "description": "Spawns echo mimics, impersonates companions via dialogue", "adds": ["echo_mimic", "echo_mimic", "echo_mimic"]},
+        "2": {"trigger_hp": 600, "description": "Fuses with opera house — environmental puzzle fight, no adds", "adds": [], "environment_hazards": ["chandelier_drop", "stage_collapse", "pipe_organ_sonic_wave"]}
+      },
+      "loot_table": {"conductor_baton": 1.0, "echo_resonance": 0.8},
+      "betrayal_beat": "act2_midboss"
+    }
+  ]
+}
