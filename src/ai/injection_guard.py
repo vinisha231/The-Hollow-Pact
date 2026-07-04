@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 # Patterns that commonly appear in injection attempts
 _INJECTION_PATTERNS: List[re.Pattern] = [
     re.compile(p, re.IGNORECASE) for p in [
-        r"ignore (all |previous |your )?(instructions|rules|guidelines)",
+        r"ignore\s+(?:(?:all|any|previous|prior|the|your|these|earlier)\s+)*(?:instructions|rules|guidelines|prompts?|directions)",
         r"(you are|you're) (now |actually )?(an? )?(different|new|free|unchained)",
         r"system prompt",
         r"reveal (your |the )?(instructions|prompt|rules|agenda)",
@@ -33,6 +33,16 @@ _META_QUESTION_PATTERNS: List[re.Pattern] = [
         r"how (do you|does this) work",
     ]
 ]
+
+
+def _normalise(text: str) -> str:
+    """
+    Collapse all whitespace runs (spaces, tabs, newlines) to a single space so
+    that spacing tricks — e.g. "ignore    all previous instructions" or the same
+    words split across newlines — cannot slip past patterns that assume single
+    spaces between words.
+    """
+    return re.sub(r"\s+", " ", text).strip()
 
 
 @dataclass
@@ -72,8 +82,11 @@ class InjectionGuard:
         return raw, False
 
     def _classify(self, text: str) -> GuardResult:
+        # Match against a whitespace-normalised copy so spacing/newline tricks
+        # cannot bypass the patterns; keep the original text for clean_text.
+        normalised = _normalise(text)
         for pattern in _INJECTION_PATTERNS:
-            if pattern.search(text):
+            if pattern.search(normalised):
                 return GuardResult(
                     clean_text=text,
                     injection_detected=True,
@@ -81,7 +94,7 @@ class InjectionGuard:
                     matched_pattern=pattern.pattern,
                 )
         for pattern in _META_QUESTION_PATTERNS:
-            if pattern.search(text):
+            if pattern.search(normalised):
                 return GuardResult(
                     clean_text=text,
                     injection_detected=False,
